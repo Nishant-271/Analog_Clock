@@ -1,0 +1,419 @@
+
+                           ANALOG WATCH PROCEDURE NOTES 
+
+
+    Here , I will write the procedure which I will use in building the analog watch by using 
+Html, css and javaScript .                      
+ 
+ In a clock we can see there are three hands hour hand , minute hand ans second hand.
+
+ So , we we want to ultimately display the time like 09:43:56  .So,i have to find the rotation 
+ they cover during anticlockwise rotation .
+
+###### CASE 1 : FOR HOUR HAND 
+
+     12 hour cover krne ke liye hour hand rotate krega =360* 
+     So , for 1 hour it will rotate = 30*     
+     and for 3 hour it will rotate = 3*30 degree  
+
+So , for general we can understand that for h hour it will rotate (30*h) degree
+
+But we can see that hour hand me minute hand ki vjh se bhi kuch degree rotation aayega toh 
+voh bhi ham dekhte hai :
+      as we see earlier 1 hour rotate=30 degree rotation 
+      so , we can write 60 min rotate = 30 degree rotatation 
+
+Then, 1 min rotate = 1/2 degree rotation 
+and 8 min rotate= 8*(1/2) degree rotatation
+
+So , for general we can understand that for m minute it will rotate (m/2) degree roatation in
+hour hand .
+
+Toh minute hand ki trh seconds hand bhi hour hand me thoda bahut rotation krega but ham usse
+calculate nhi krenge ku voh bahut jyada negligeble roatation perform krega.
+
+So , for hour hand to know degree of rotation  for h hour and m minute be :
+
+######            [ Formula = (30h + m/2) ]
+
+###### CASE 2 : FOR MINUTE HAND 
+       
+      60 min cover krne ke liye minute hand rotate =360 degree
+
+    So,to cover  1 min minute hand rotate = 6 degree roatation
+    then for m minute ,minute hand rotate = (6*m) degree roatation 
+
+    So, for minute hand to know degree of rotation for m minutes be , 
+
+######            [Formula= (6*m) ] 
+
+Toh again second hand ki vjh se minute hand me kuch rotation hoga, but voh rotation
+itna jyada negligeble hoga toh hm usse ignore krenge .
+
+
+###### CASE 3 : FOR SECOND HAND
+      
+    1 min cover krne ke liye second hand rotate =360 degree
+   So , for 60 seconds , second hand rotate =360 degree
+    So,to cover  1 sec ,second hand rotate = 6 degree roatation
+    then for s second ,second hand rotate = (6*s) degree roatation 
+
+    So, for second hand to know degree of rotation for s second be, 
+
+######            [Formula= (6*s) ] 
+
+
+######        BASIC  APPROCHES
+
+Our basic approch is that ::
+
+1. we will take simple clock.png image from google which don't have any hand in it .
+2. then we will create three hands one for hour , one for minute 
+and one for second then we will firstly assign all these three hands to point 12 in a image.
+3. By using javascript , i will know what was the current time going on ,
+4. and according to that time change my hands correspondingly .
+5. By using javascript i will make those hour,mind and second hand to work responsively .
+6. BY using above derive formulas , we can continuously rotate 
+our hour hand,second hand and minute hand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

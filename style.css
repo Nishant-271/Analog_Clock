@@ -1,0 +1,75 @@
+/*
+
+0.The full form of VW is viewport width. It works like the percentage unit.
+Specifying 10vw is equivalent to occupying 10% of entire visible screen width.
+1.url(image extension): is used to fit the  particular image
+2. no repeat is used to avoid the repeatition of the particular image.
+3. and if image is not set appropriately then backgroung size:100% is used to fit the image.
+4. border is used to createa border 
+5. margin:auto will help me to change the position to center
+
+
+*/
+
+#clockcontainer{
+    position :relative;
+    /* border:2px solid#2c3e50; */
+    height: 40vw;
+    width: 40vw;
+    background : url(clock.png) no-repeat; 
+    background-size: 100%;
+    margin:auto;
+    }
+
+/* Now we will assign some basic properties which will be same in all three hands id */
+
+#hour,#minute,#second{
+    position:absolute;
+    border-radius: 10px;
+background: black;
+transform-origin: bottom;
+}
+
+/* now i will assign hieght and wi dth for each hand   separately  */
+
+/* we can opacity which is used to specify the transparency of the element. 
+transform:help me to rotate,translate the elements.By default it rotate
+the elements from center.  
+and transform-origin will help me to rotate the element from top,
+bottom or center
+
+*/
+
+#hour{
+    width: 1.9%;
+    height: 19%;
+    top: 29%;
+    left: 48.4%;
+    opacity: 0.8;
+    /* display: none; */
+    }
+
+#minute{
+    width: 1.6%;
+    height: 31%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;
+    /* display: none; */
+}
+
+#second{
+    width: 1.8%;
+    height: 38%;
+    top: 11%;
+    left: 48.4%;
+    opacity: 0.8;
+        /* display: none; */
+    }
+
+
+
+
+
+
+
